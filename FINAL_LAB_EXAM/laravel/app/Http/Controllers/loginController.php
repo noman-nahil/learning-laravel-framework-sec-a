@@ -14,19 +14,17 @@ class loginController extends Controller
 		//$req->session()-put('name',$req->username);
 		//$req->session()-get('name')
         //$req->session()-has('name');
-        $users= Employee::all();
-        print_r($users);
-        /*if(){
-
-        }
-		if($req->username == $req->password && $req->password!="" ){
-			$req->session()->put('username', $req->username);
-			return redirect('/home');
-		}
-		else{
-			$req->session()->flash('msg', 'invalid username/password');
-			return redirect('/login');
-			//return view('/login');
-		}*/
+        $users= Employee::where('username',$req->username)
+                ->where('password', $req->password)
+                ->get();
+                if(count($users) > 0){
+                    $req->session()->put('username', $req->username);
+                    $req->session()->put('type', $req->username);
+                    
+                    return redirect('/home');
+                }else{
+                    $req->session()->flash('msg', 'invalid username/password');
+                    return redirect('/login');
+                }
     }
 }
