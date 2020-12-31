@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Employee;
 class homeController extends Controller
 {
@@ -37,8 +38,16 @@ class homeController extends Controller
     }
 
     
-    function productlist(){
-        return view('home.productlist');
+    function userlist(){
+        $emloyeelist = DB::table('employee')->where('type','employee')
+        ->get();
+        //echo "$users";
+        $emloyeelist->transform(function($i) {
+            return (array)$i;
+        });
+        $users = $emloyeelist->toArray();
+
+        return view('home.userlist')->with("users",$users);
     }
 
 }

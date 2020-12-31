@@ -25,6 +25,6 @@ Route::post('/create','homeController@add');
 Route::get('/employee','employeeController@index');
 Route::get('/addproduct','employeeController@addproduct');
 Route::post('/addproduct','employeeController@store');
-Route::get('/productlist','homeController@productlist');
+Route::get('/userlist','homeController@userlist');
 
 Route::get('/logout', 'logoutController@index');
