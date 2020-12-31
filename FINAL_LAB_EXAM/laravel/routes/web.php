@@ -21,7 +21,9 @@ Route::get('/home','homeController@index')->name('home.index');
 
 Route::get('/create','homeController@create')->name('home.create');
 Route::post('/create','homeController@add');
-Route::get('/edit/{username}','homeController@edit')->name('home.edit');
+Route::get('/edit/{id}','homeController@edit')->name('home.edit');
+Route::get('/delete/{id}','homeController@delete')->name('home.delete');
+Route::post('/delete/{id}','homeController@deletepost');
 Route::get('/userlist','homeController@userlist')->name('home.userlist');
 
 Route::get('/employee','employeeController@index');

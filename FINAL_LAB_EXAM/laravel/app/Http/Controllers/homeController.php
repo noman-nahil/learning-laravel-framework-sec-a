@@ -49,9 +49,19 @@ class homeController extends Controller
 
         return view('home.userlist')->with("users",$users);
     }
-    function edit($username){
-        //return view('home.edit');
-        echo "$username";
+    function edit($id){
+        $user = Employee::find($id);
+        return view('home.edit',$user);
+        //echo "$user";
+    }
+    function delete($id){
+        $user = Employee::find($id);
+        return view('home.delete',$user);
+        //echo "$user";
+    }
+    function deletepost($id){
+        DB::table('employee')->delete($id);
+        return redirect('/userlist');
     }
 
 }

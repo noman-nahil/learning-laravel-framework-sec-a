@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Product list page</title>
+	<title>Employee list page</title>
 </head>
 <body>
 
-	<h3>All Product</h3>
+	<h3>All Employee</h3>
 	<a href="/home">Back</a> |
 	<a href="/logout">logout</a>
 
@@ -26,8 +26,8 @@
 			<td>{{$user['contact']}}</td>
 			<td>{{$user['type']}}</td>
 			<td>
-				<a href="{{route('home.edit',$user['username'])}}">Edit</a> |
-				<a href="">Delete</a> 
+				<a href="{{route('home.edit',$user['id'])}}">Edit</a> |
+				<a href="{{route('home.delete',$user['id'])}}">Delete</a> 
 			</td>
 		</tr>
 		@endforeach

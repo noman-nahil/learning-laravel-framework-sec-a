@@ -8,7 +8,7 @@ class Employee extends Model
 {
     //
     protected $table = "employee";
-    protected $primaryKey =  "username";
+    protected $primaryKey =  "id";
     public $timestamps = false;
     
 }
