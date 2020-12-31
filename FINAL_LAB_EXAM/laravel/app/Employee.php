@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     //
-    protected $table = "Employee";
-    protected $primaryKey =  "id";
-    public $timetamps = false;
+    protected $table = "employee";
+    protected $primaryKey =  "username";
+    public $timestamps = false;
     
 }

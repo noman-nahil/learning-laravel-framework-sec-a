@@ -4,11 +4,11 @@
     </head>
     <body>
         <h1>Welcome home</h1>
-        <a href="/create">Add new employee </a> 
+        <a href="/addproduct">Add Product</a>
        
        <!--<input type="text" name="name" value="{{$name}}">-->
 <br>
        Name:{{$name}}
-       <br><a href="/home">Back</a>||<a href="/logout">logout</a>
+       <br><a href="/employee">Back</a>||<a href="/logout">logout</a>
     </body>
 </html>

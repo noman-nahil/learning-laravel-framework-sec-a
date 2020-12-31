@@ -20,6 +20,11 @@ Route::post('/login','loginController@verify');
 Route::get('/home','homeController@index');
 
 Route::get('/create','homeController@create');
+Route::post('/create','homeController@add');
 
-Route::get('/addproduct','homeController@addproduct');
+Route::get('/employee','employeeController@index');
+Route::get('/addproduct','employeeController@addproduct');
+Route::post('/addproduct','employeeController@store');
 Route::get('/productlist','homeController@productlist');
+
+Route::get('/logout', 'logoutController@index');

@@ -27,11 +27,15 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><input type="submit" name="submit" value="Create"></td>
+					<td><input type="submit" name="submit" value="Add New Employee"></td>
 				</tr>
 				<tr>
 					<td><a href="/home">Back</a></td>
 					<td><a href="/logout">logout</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><h5>{{session('createmsg')}}<h5></td>
 				</tr>
 			</table>
 		</fieldset>
