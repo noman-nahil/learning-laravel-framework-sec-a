@@ -26,7 +26,7 @@
 			<td>{{$user['contact']}}</td>
 			<td>{{$user['type']}}</td>
 			<td>
-				<a href="">Edit</a> |
+				<a href="{{route('home.edit',$user['username'])}}">Edit</a> |
 				<a href="">Delete</a> 
 			</td>
 		</tr>

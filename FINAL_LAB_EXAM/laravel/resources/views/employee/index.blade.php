@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1>Welcome home</h1>
-        <a href="/addproduct">Add Product</a>
+        <a href="/addproduct">Add Product</a> || <a href="/productlist">Product List</a>
        
        <!--<input type="text" name="name" value="{{$name}}">-->
 <br>

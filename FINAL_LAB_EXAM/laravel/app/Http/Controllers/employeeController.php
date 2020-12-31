@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,16 @@ class employeeController extends Controller
             return redirect('/addproduct');
             
         }
+    }
+    function productlist(){
+        $list = DB::table('product')->get();
+        //echo "$users";
+        $list->transform(function($i) {
+            return (array)$i;
+        });
+        $products = $list->toArray();
+
+        return view('employee.productlist')->with("products",$products);
     }
 
 

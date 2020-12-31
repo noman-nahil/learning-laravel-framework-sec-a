@@ -49,5 +49,9 @@ class homeController extends Controller
 
         return view('home.userlist')->with("users",$users);
     }
+    function edit($username){
+        //return view('home.edit');
+        echo "$username";
+    }
 
 }

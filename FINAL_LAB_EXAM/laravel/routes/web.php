@@ -17,14 +17,17 @@ Route::get('/', function () {
 Route::get('/login','loginController@index');
 Route::post('/login','loginController@verify');
 
-Route::get('/home','homeController@index');
+Route::get('/home','homeController@index')->name('home.index');
 
-Route::get('/create','homeController@create');
+Route::get('/create','homeController@create')->name('home.create');
 Route::post('/create','homeController@add');
+Route::get('/edit/{username}','homeController@edit')->name('home.edit');
+Route::get('/userlist','homeController@userlist')->name('home.userlist');
 
 Route::get('/employee','employeeController@index');
 Route::get('/addproduct','employeeController@addproduct');
 Route::post('/addproduct','employeeController@store');
-Route::get('/userlist','homeController@userlist');
+Route::get('/productlist','employeeController@productlist');
+
 
 Route::get('/logout', 'logoutController@index');
