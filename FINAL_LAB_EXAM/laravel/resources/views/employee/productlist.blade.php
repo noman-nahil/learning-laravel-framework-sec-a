@@ -14,12 +14,14 @@
 
 	<table border="1">
 		<tr>
+		<td>ID</td>
 			<td>Product Name</td>
 			<td>Quantity</td>
 			<td>Price</td>
 		</tr>
 		@foreach($products as $product)
 		<tr>
+			<td>{{$product['id']}}</td>
 			<td>{{$product['pname']}}</td>
 			<td>{{$product['quantity']}}</td>
 			<td>{{$product['price']}}</td>

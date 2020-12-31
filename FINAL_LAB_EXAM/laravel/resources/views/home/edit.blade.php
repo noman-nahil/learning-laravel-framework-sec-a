@@ -19,7 +19,7 @@
 				</tr>
 				<tr>
 					<td>Contact no.</td>
-					<td><input type="text" name="contact" value="{{$}}"></td>
+					<td><input type="text" name="contact" value=""></td>
 				</tr>
 				<tr>
 					<td></td>
